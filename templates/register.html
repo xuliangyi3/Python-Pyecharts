@@ -1,0 +1,46 @@
+{% extends 'LoginBase.html' %}
+
+{% block header %}
+    <title>register</title>
+    <script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{{ url_for('static',filename = 'js/register.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+	<main class="form-signin w-100 m-auto">
+    <form style="text-align: center;" method="post">
+        <img class="mb-4" src="{{ url_for('static',filename='assets/brand/bootstrap-logo.svg') }}" alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal">Please register</h1>
+        <div class="form-floating">
+            <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+            <label for="email">Email</label>
+        </div>
+        <div class="form-floating">
+           <input type="captcha" class="form-control" id="captcha1" placeholder="Captcha" name="captcha">
+            <label for="captcha">Captcha</label>
+        </div>
+        <div class="form-floating">
+            <input type="username" class="form-control" id="username" placeholder="Username" name="username">
+            <label for="username">Username</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="password"  name="password" placeholder="Password" style="margin: 0px;" autocomplete="off">
+            <label for="password">Password</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="password_confirm" placeholder="Confirm Password" autocomplete="off"  name="password_confirm">
+            <label for="password_confirm">Confirm Password</label>
+        </div>
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="btn btn-primary" type="submit">Sign in</button>
+        <button class="btn btn-secondary" id="captcha" type="button">Send captcha</button>
+    </form>
+</main>
+
+{% endblock %}
+

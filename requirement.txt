@@ -1,0 +1,9 @@
+Flask
+Flask-Migrate
+Flask-SQLAlchemy
+PyMySQL
+Flask-Mail
+flask-wtf
+email-validator
+pyecharts
+echarts-china-cities-pypkg
